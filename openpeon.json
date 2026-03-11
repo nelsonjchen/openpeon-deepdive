@@ -3,7 +3,7 @@
   "name": "deep-dive-banter",
   "display_name": "Deep Dive Banter",
   "version": "0.1.0",
-  "description": "Unofficial AI podcast-host parody clips for OpenPeon, mined and tightened from Audio Overview-style runs.",
+  "description": "Unofficial AI host parody clips for OpenPeon, mined and tightened from Google's Audio Overviews, mostly from NotebookLM.",
   "author": {
     "name": "Nelson"
   },

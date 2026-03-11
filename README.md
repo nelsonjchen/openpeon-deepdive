@@ -1,6 +1,8 @@
-# Deep Dive Banter
+# Google's Audio Overview Deep Dive Banter
 
-`Deep Dive Banter` is an OpenPeon-compatible sound pack built from mined and tightened AI podcast-host clips in the style of Google's `Audio Overview` / `Deep Dive` output.
+`Deep Dive Banter` is an OpenPeon-compatible sound pack built from mined and tightened clips from Google's `Audio Overview` outputs, mostly from NotebookLM.
+
+The point of the pack is the AI hosts' exaggerated podcast mannerisms: over-serious framing, constant transitions, dramatic recaps, and polished banter applied to tiny software events.
 
 The repo serves two purposes:
 
@@ -62,8 +64,8 @@ Put new raw source files in [source_clips](/Users/nelson/code/openpeon-deepdive/
 
 Good inputs:
 
-- NotebookLM / Audio Overview `.m4a`
-- other generated podcast-style `.m4a`, `.mp3`, or `.wav`
+- Google Audio Overview / NotebookLM `.m4a`
+- other Google Audio Overview examples or similarly structured generated `.m4a`, `.mp3`, or `.wav`
 - multiple files at once
 
 `source_clips/` is gitignored on purpose, so you can dump raw material there without polluting the repo history.
@@ -72,7 +74,7 @@ Good inputs:
 
 Useful prompts you can give me in this repo:
 
-- `Mine the new files in source_clips for good Deep Dive phrases.`
+- `Mine the new files in source_clips for good Google Audio Overview host phrases.`
 - `Transcribe everything in source_clips and update the preview.`
 - `Find short standalone phrases for task.complete and input.required.`
 - `Tighten these clips to exact word boundaries and repackage the sounds.`
