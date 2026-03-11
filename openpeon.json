@@ -1,0 +1,136 @@
+{
+  "cesp_version": "1.0",
+  "name": "deep-dive-banter",
+  "display_name": "Deep Dive Banter",
+  "version": "0.1.0",
+  "description": "Unofficial AI podcast-host parody clips for OpenPeon, mined and tightened from Audio Overview-style runs.",
+  "author": {
+    "name": "Nelson"
+  },
+  "license": "CC-BY-NC-4.0",
+  "language": "en",
+  "categories": {
+    "session.start": {
+      "sounds": [
+        {
+          "file": "sounds/session-start-distinct.mp3",
+          "label": "Distinct session",
+          "sha256": "2b066c1b127e25359427705e5f20da72c50076cff6b4e870b7ebb945afe37a3d"
+        },
+        {
+          "file": "sounds/session-start-welcome-to-the-deep-dive.mp3",
+          "label": "Welcome to the deep dive",
+          "sha256": "d9a7cd05badd6d938d5bb7d1b2359f6ba96ec4e4a83b58e412e0b835e78575ee"
+        }
+      ]
+    },
+    "task.acknowledge": {
+      "sounds": [
+        {
+          "file": "sounds/task-ack-departure.mp3",
+          "label": "Quite a departure",
+          "sha256": "22c27f4fd0ab2876f2dc7e2b110bc42a8769d1acc8c1cebf254a5bc50762be5d"
+        },
+        {
+          "file": "sounds/task-ack-right-away-this-feels-different.mp3",
+          "label": "Feels different",
+          "sha256": "07665e2c46edfbc9c9a9c268262b8a3fc985e3a1b76ed066c229e5230773b5e8"
+        },
+        {
+          "file": "sounds/task-ack-in-a-nutshell-structure.mp3",
+          "label": "In a nutshell",
+          "sha256": "44da2917ba036778064ff09b8e76454d65747d400c7b65bb7d745b21277e2c65"
+        }
+      ]
+    },
+    "task.progress": {
+      "sounds": [
+        {
+          "file": "sounds/task-progress-lets-unpack-this.mp3",
+          "label": "Let's unpack this",
+          "sha256": "85f2244ee16f97da3505c1d62d47bc5f1819b88d8b197781f25e768ed5c51f0b"
+        },
+        {
+          "file": "sounds/task-progress-heres-the-thing.mp3",
+          "label": "Here's the thing",
+          "sha256": "742a585493d90bfba214812079eb3b593f10dd11e3374881629a5449a9a66623"
+        },
+        {
+          "file": "sounds/task-progress-zoom-out-for-a-second.mp3",
+          "label": "Zoom out",
+          "sha256": "10cb693456d6dce871410eec4b5ddce6a9b234e7f1945b65eca40aea893481f2"
+        }
+      ]
+    },
+    "task.complete": {
+      "sounds": [
+        {
+          "file": "sounds/task-complete-kind-of-remarkable.mp3",
+          "label": "Kind of remarkable",
+          "sha256": "e8cb28645758200373d9b95f655881026030f8f7bf316c530e07c86962a76e07"
+        },
+        {
+          "file": "sounds/task-complete-changes-the-frame-completely.mp3",
+          "label": "Changes the frame",
+          "sha256": "7435da9665781d6368887293174693d88eef9f8e02dc1907fba498ab5c64d791"
+        },
+        {
+          "file": "sounds/task-complete-full-circle.mp3",
+          "label": "Full circle",
+          "sha256": "d605faab2fef75702a72e8559303c542c52737b76e81c490db27d7bf4bb805f2"
+        }
+      ]
+    },
+    "task.error": {
+      "sounds": [
+        {
+          "file": "sounds/task-error-not-what-we-wanted.mp3",
+          "label": "Not what we wanted",
+          "sha256": "577824d9b2ab84943385202176d9dfee4e86a81321e4cef7a7bb53c4ecb15a57"
+        },
+        {
+          "file": "sounds/task-error-failure-is-informative.mp3",
+          "label": "Failure is informative",
+          "sha256": "f6210193e429fab4df8a04d0bc2ba6daf485fe72e66bb699c19bb80c5643305f"
+        }
+      ]
+    },
+    "input.required": {
+      "sounds": [
+        {
+          "file": "sounds/input-required-one-key-detail.mp3",
+          "label": "One key detail",
+          "sha256": "6edc220ef787aa3fe77f97e9b8a23435222cd3203691d98aefe9d51742eaef6b"
+        },
+        {
+          "file": "sounds/input-required-decision-point.mp3",
+          "label": "Decision point",
+          "sha256": "0723ca93a789364f50db10ff025ed741d3468093cf51a170a4ff30874ef14bd5"
+        },
+        {
+          "file": "sounds/input-required-depends-on-you.mp3",
+          "label": "Depends on you",
+          "sha256": "f5b19de2cff887918f93954e1d26f6e30d4c53510a86796926d071e670583cf5"
+        }
+      ]
+    },
+    "resource.limit": {
+      "sounds": [
+        {
+          "file": "sounds/resource-limit-system-is-telling-us-something.mp3",
+          "label": "System is telling us something",
+          "sha256": "7aa244d10a4c4f8885a539636a6e2b1fe6184a1251c12cd53732431ca6a6df04"
+        }
+      ]
+    },
+    "session.end": {
+      "sounds": [
+        {
+          "file": "sounds/session-end-right-place-to-leave-it.mp3",
+          "label": "Right place to leave it",
+          "sha256": "d45131ecd7f8afba2feb591844b13f1f59e1b98c6dfbad3c15cbb1468492dcce"
+        }
+      ]
+    }
+  }
+}
