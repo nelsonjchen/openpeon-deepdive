@@ -1,2 +1,6 @@
 source_clips/
 .DS_Store
+!out/
+!out/curated-clip-candidates.md
+!out/whisper-transcripts/
+!out/whisper-transcripts/*.md

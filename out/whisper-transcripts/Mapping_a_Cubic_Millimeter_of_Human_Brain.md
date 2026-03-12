@@ -1,0 +1,146 @@
+# Mapping_a_Cubic_Millimeter_of_Human_Brain
+
+Local `whisper-cpp` transcript.
+
+- `00:00:00,000-00:00:05,040` Welcome back to The Deep Dive. Today I want to start with a quick visualization exercise.
+- `00:00:05,040-00:00:05,840` Okay, I'm right.
+- `00:00:05,840-00:00:10,320` So I want you to just look at your fingertip, and imagine right on the ridge of your fingerprint,
+- `00:00:10,320-00:00:14,240` a tiny cube of tissue, about the size of a grain of sand.
+- `00:00:14,240-00:00:18,480` One millimeter on each side. So tiny, if you dropped it, it's gone forever.
+- `00:00:18,480-00:00:24,880` Exactly. But here's the thing, that single grain of sand, which is a piece of human cerebral cortex,
+- `00:00:24,880-00:00:27,520` contains 1.4 petabytes of data.
+- `00:00:27,520-00:00:32,800` It's a number that's almost impossible to wrap your head around, it's like 300 million high res
+- `00:00:32,800-00:00:38,720` photos in a spec you can barely see. It's completely staggering. And this is the H01 dataset,
+- `00:00:38,720-00:00:43,440` a collaboration between Harvard and Google, and it's our mission today to dive into it,
+- `00:00:43,440-00:00:47,520` because this is supposedly the highest resolution map of the human brain ever.
+- `00:00:47,520-00:00:50,960` And it really is. I mean, we've had brain maps before, but they're like looking at a country
+- `00:00:50,960-00:00:56,000` from space. You see the major highways. This is Google Street View. You can see every house,
+- `00:00:56,000-00:01:00,560` every mailbox, every single power line connecting them. And when you zoom in that close,
+- `00:01:00,560-00:01:06,640` some of the textbook stuff starts to look a little shaky. We're going to talk about neurons that
+- `00:01:06,640-00:01:11,280` act like compasses and connections so powerful they seem deliberate. It takes the idea of brain
+- `00:01:11,280-00:01:17,280` complexity from an abstract concept and makes it, well, something you can actually count and measure,
+- `00:01:17,280-00:01:22,000` which is a huge leap. So let's start with where this sample even came from,
+- `00:01:22,000-00:01:26,400` because that to me was one of the first surprising things. This isn't from a brain bank.
+- `00:01:26,400-00:01:31,520` No, and it couldn't be. The issue with cadaver tissue is that it starts degrading the moment
+- `00:01:31,520-00:01:36,800` the heart stops. And you can't map connections at the nanoscale if the structure is falling apart.
+- `00:01:36,800-00:01:42,400` Exactly. You need living tissue. And in this case, it came from a 45 year old woman who is
+- `00:01:42,400-00:01:47,440` undergoing surgery for epilepsy. Okay, so how does that work? Well, to get to the part of the brain
+- `00:01:47,440-00:01:52,560` that's causing the seizures, surgeons sometimes have to remove a small healthy piece of cortex
+- `00:01:52,560-00:01:57,120` that's in the way like a plug at tissue. Precisely. And the research team was right there in the
+- `00:01:57,120-00:02:01,680` operating room. The second it was removed, it was put into preservatives. The cells were
+- `00:02:01,680-00:02:06,640` essentially still alive when they were fixed in place, which explains the insane level of detail.
+- `00:02:06,640-00:02:11,280` But then there's the engineering challenge. I mean, slicing a one millimeter cube
+- `00:02:12,000-00:02:18,160` into more than 5000 sections. Yeah, and each slice is about 30 nanometers thick. That's
+- `00:02:18,160-00:02:22,480` what's good comparison for that. A strand of DNA is like two and a half nanometers. So we're talking
+- `00:02:22,480-00:02:28,640` about slices just 10 or 12 times thicker than a DNA molecule. It's just absurdly thin. And then
+- `00:02:28,640-00:02:35,280` they had to take a picture of every single one, which I read took 326 days. Almost a full year.
+- `00:02:35,280-00:02:40,560` A year. And that wasn't with just some standard microscope. They built a custom rig with 61 electron
+- `00:02:40,560-00:02:46,320` beams scanning at the same time. So even with 61 scanners running 2047, it still took that long.
+- `00:02:46,320-00:02:51,200` It's just a monumental amount of data to capture. Can you imagine the stress? If the power goes out
+- `00:02:51,200-00:02:56,240` on day 300, you might lose the whole thing. I can't even think about it. But getting the images,
+- `00:02:56,240-00:03:01,680` that's only half the battle, right? Now you have 5000 2D pictures. And you have to put them back
+- `00:03:01,680-00:03:06,720` together. You have to trace every single wire from one slice to the next. A neuron's axon can
+- `00:03:06,720-00:03:11,600` look like a tiny dot in one image. And a slightly different dot in the next. And you have to know
+- `00:03:11,600-00:03:18,560` it's the same wire. Doing that by hand for 50,000 cells would be impossible. It would take centuries.
+- `00:03:18,560-00:03:22,400` So AI comes in. Right. They use something called flood filling networks.
+- `00:03:22,400-00:03:28,640` The AI looks at a cell in one slice and then predicts its shape in the next slice and sort of
+- `00:03:28,640-00:03:33,920` floods it with a unique color to trace it through the whole volume. It's like reassembling a shredded
+- `00:03:33,920-00:03:39,120` document that's in 3D and has billions of letters. That's a great way to put it. So once they did
+- `00:03:39,120-00:03:43,760` all that, they could finally take a census of the neighborhood. And this is where my old biology
+- `00:03:43,760-00:03:48,160` textbook really got thrown out the window. Ah, the old neuron centric view of the brain. Yeah,
+- `00:03:48,160-00:03:53,440` you know, neurons are the stars. Gullily air, just the boring support staff. But that's not what
+- `00:03:53,440-00:03:59,520` they found at all, is it? Not even close. In the sample, the support staff out numbers the stars
+- `00:03:59,520-00:04:05,120` two to one. Two to one. For every one neuron, there are two glial cells. And the single most
+- `00:04:05,120-00:04:10,320` common cell in the entire cube wasn't a neuron at all. It was the oligodendrocyte.
+- `00:04:10,320-00:04:15,280` The cells that make myelin, the insulation. Exactly. There were over 20,000 of them.
+- `00:04:15,280-00:04:20,000` So what does that tell us? Why so much insulation in this high level processing area?
+- `00:04:20,000-00:04:25,360` It tells you that raw computation isn't the only thing that matters. The brain is obsessed with
+- `00:04:25,360-00:04:29,920` speed and timing. It's not just about sending the signal. It's about making sure it gets there
+- `00:04:29,920-00:04:34,720` at the exact right moment. Myelin speeds up the signal. Having this much of it means the
+- `00:04:34,720-00:04:40,160` brain is meticulously managing the synchronization of everything. It's a high speed, heavily insulated
+- `00:04:40,160-00:04:46,240` circuit. And speaking of infrastructure, the plumbing in this thing, the blood vessels. Oh, the energy
+- `00:04:46,240-00:04:50,560` grid. Yeah, they found 230 millimeters of blood vessels. That's almost nine inches,
+- `00:04:50,560-00:04:56,800` coiled up inside a grain of sand. It's a bit of a paradox. The brain runs on 20 watts of power.
+- `00:04:56,800-00:05:00,000` It's incredibly efficient overall. Right, dimmer than a light bulb.
+- `00:05:00,000-00:05:05,920` But locally, the infrastructure to deliver that power, the glucose and oxygen, is just massive.
+- `00:05:05,920-00:05:11,840` It shows you how metabolically expensive thinking is. The brain is always just moments away from
+- `00:05:11,840-00:05:17,280` an energy crisis. Okay, so it's a high maintenance, high speed environment. But what about the design,
+- `00:05:17,280-00:05:20,880` the architecture? This is where we get to the compass cells. Yeah, this, this is where it gets
+- `00:05:20,880-00:05:26,240` really interesting. Going in layer six, the deepest part of the cortex, they looked at these triangular
+- `00:05:26,240-00:05:31,680` neurons. And their dendrites, the antennas for receiving signals, they weren't just pointing
+- `00:05:31,680-00:05:36,400` every which way. No, not at all. You'd expect some randomness, you know, like tree roots spreading
+- `00:05:36,400-00:05:42,000` out. But these were incredibly organized. They showed a bimodal distribution, meaning they pointed
+- `00:05:42,000-00:05:48,240` in two main directions. Two specific mirror image directions, like a compass that could only point
+- `00:05:48,240-00:05:53,200` north or south. And they were perfectly aligned with the big white matter fiber tracks running
+- `00:05:53,200-00:05:58,720` underneath them. So why? Why would the brain care, which we had dendrite is pointing? It's about
+- `00:05:58,720-00:06:04,640` managing information flow. Think of it like this. You have data streams running from the front of
+- `00:06:04,640-00:06:10,640` the brain to the back and vice versa. If your antennas are random, you pick up all the cross stock.
+- `00:06:10,640-00:06:16,560` It's just noise. But if you align them, you can selectively tune in to a specific direction of
+- `00:06:16,560-00:06:22,800` traffic. It turns the deep cortex into something less like a tangled mess and more like a printed
+- `00:06:22,800-00:06:28,400` circuit board with dedicated lanes for information. So there's a real rigid geometry down there that
+- `00:06:28,400-00:06:33,040` we just never saw before. We just never had the resolution to see it this clearly. Okay. So the
+- `00:06:33,040-00:06:37,280` cells are aligned, but then there are the connections themselves. And this is the part that I think
+- `00:06:37,280-00:06:42,400` really stopped me in my tracks. The super connections outliers. Yeah. My understanding has always been
+- `00:06:42,400-00:06:47,760` that a synapse is a whisper. One neuron connects to another. It's a tiny vote, a small influence.
+- `00:06:47,760-00:06:52,720` And that's true for the vast majority. In the data, 96% of all the connections were just a single
+- `00:06:52,720-00:06:57,200` synapse, a whisper. But then they found the screamers. They did. They found pairs of neurons
+- `00:06:57,200-00:07:03,920` connected by not one, not two, but in one case, 53 separate synapses. 53. I mean, my first thought
+- `00:07:03,920-00:07:08,960` is, isn't that incredibly inefficient? Why not just make one really big, strong connection?
+- `00:07:08,960-00:07:13,440` It is metabolically expensive, for sure. But it's all about reliability. A single
+- `00:07:13,440-00:07:21,200` synapse is probabilistic. It can fail. It's noisy. So if you absolutely positively need neuron B to
+- `00:07:21,200-00:07:26,240` fire when neuron A fires, you can't rely on a whisper. You need a detonator. You build in
+- `00:07:26,240-00:07:31,920` redundancy. This connection cannot be allowed to fail. But how do we know this isn't just a fluke?
+- `00:07:32,560-00:07:36,400` You know, maybe the two neurons just happened to run next to each other for a long way and kept
+- `00:07:36,400-00:07:41,120` bumping into one another. A great question. And they tested for that. They ran a null model.
+- `00:07:41,120-00:07:45,680` A computer simulation where they kept the neuron shapes, but randomized their locations to see
+- `00:07:45,680-00:07:50,000` what would happen by chance. Did the random brain make any super connections? Not a single one.
+- `00:07:50,000-00:07:54,720` The probability of a 50 synapse connection happening by chance was calculated to be less than one
+- `00:07:54,720-00:08:00,240` in 10 billion. P value of less than 10 to the minus 10. So this is not random. This is design.
+- `00:08:00,240-00:08:05,920` It's biological intent. And you can see it in the structure. The axon doesn't just run parallel
+- `00:08:05,920-00:08:12,400` to the dendrite. It actively wraps around it, like a vine climbing a trellis. It sends out
+- `00:08:12,400-00:08:18,080` little branches to grab on again and again. It is physically hugging its target. That image of a
+- `00:08:18,080-00:08:23,760` vine. It feels like something that was built over time with purpose. And that's where this gets
+- `00:08:23,760-00:08:28,640` really profound. It leads to this idea of ingramics. The search for the anagram, right? The physical
+- `00:08:28,640-00:08:34,240` trace of a memory. Exactly. For a century, we've had this theory that learning physically changes
+- `00:08:34,240-00:08:38,480` the brain's wiring. But we've never been able to point to a specific connection and say,
+- `00:08:38,480-00:08:43,360` there, that's the memory of your first pet. And you're suggesting these super connections might
+- `00:08:43,360-00:08:48,720` be exactly that. It's a very strong possibility. Think about it. When you practice a skill over
+- `00:08:48,720-00:08:53,280` and over, you strengthen that circuit. Maybe it starts as a whisper. But through years of repetition,
+- `00:08:53,280-00:08:58,560` the brain builds that vine adds more and more connection points until it's an unbreakable
+- `00:08:58,560-00:09:04,400` detonator-style bond. So we could be looking at the physical embodiment of a deeply ingrained habit
+- `00:09:04,400-00:09:08,880` or memory from this patient's life. We could be looking at the physical scar of learning.
+- `00:09:08,880-00:09:14,800` It's an incredible thought. It really is. But we also have to talk about the other strange things
+- `00:09:14,800-00:09:21,440` they found. The literal oddities. They had a whole section on UCOs. Unidentified cortical objects,
+- `00:09:21,440-00:09:26,080` which is just a fantastic name. It is. They found things that are not in the textbooks.
+- `00:09:26,080-00:09:31,040` Yeah. Like axons that just curled up into these massive tangled yarn balls.
+- `00:09:31,040-00:09:38,960` Whirls. Yeah. Huge knots of wire leading nowhere. And strange egg-shaped bodies inside cells that
+- `00:09:38,960-00:09:42,480` no one can identify. And what about the broken bridges in the blood vessels?
+- `00:09:42,480-00:09:46,960` Right. A capillary that just stops. A dead end. So the elephant in the room is,
+- `00:09:46,960-00:09:50,880` is it just what an epileptic brain looks like? Are we just seeing pathology?
+- `00:09:50,880-00:09:55,280` That's the billion dollar question. And the researchers are very clear that this specific
+- `00:09:55,280-00:09:59,840` chunk of tissue appeared healthy under a normal microscope. It wasn't the seizure focus.
+- `00:09:59,840-00:10:04,240` But the brain as a whole was not healthy. Exactly. So maybe these whirls are scar
+- `00:10:04,240-00:10:08,960` tissue from the electrical storms of seizures. Or a side effect of medication. That's one
+- `00:10:08,960-00:10:13,360` possibility. And the other possibility. The other more unsettling possibility is that they're in
+- `00:10:13,360-00:10:19,440` all of our brains. That this is just the normal messiness of biology. Right. We have these clean,
+- `00:10:19,440-00:10:26,320` idealized diagrams. But nature is messy. When you zoom in this far, you're going to find
+- `00:10:26,320-00:10:33,360` glitches, debris, construction errors. We just don't have a baseline from a perfectly healthy
+- `00:10:33,360-00:10:38,560` human at this resolution to know what's normal chaos and what's disease. It's like we've landed
+- `00:10:38,560-00:10:43,200` on a new planet. And we can't tell which plants are native and which are invasive weeds.
+- `00:10:43,200-00:10:47,680` That's a perfect analogy. We have no field guide yet. Which brings me to the thought I really
+- `00:10:47,680-00:10:52,800` want to end on. We've spent this entire time talking about one cubic millimeter. One. And a whole
+- `00:10:52,800-00:10:58,240` human brain is about a million times bigger than that. A million times. So if we found compass cells
+- `00:10:58,240-00:11:04,720` and detonators and absis and mystery objects in this one single grain of sand, what on earth is
+- `00:11:04,720-00:11:08,800` waiting for us in the rest of the beach? Well, that's the zettabyte problem, isn't it? To map a whole
+- `00:11:08,800-00:11:12,560` brain at this resolution would generate more data than currently exists on every hard drive
+- `00:11:12,560-00:11:17,360` on the planet combined. We couldn't even store it. So we're actually limited more by our computers
+- `00:11:17,360-00:11:23,200` than our microscopes at this point. For now, yeah. But this HRO1 dataset is the proof of concept.
+- `00:11:23,200-00:11:28,560` It shows what's there to be found. And for me, it just changes how I think about my own mind.
+- `00:11:28,560-00:11:34,480` How so? I can't think of it as a computer anymore. Computers are neat and tidy. This is a jungle.
+- `00:11:34,480-00:11:41,120` It's a galaxy. It's teeming with strange structures and super highways and cosmic dust.
+- `00:11:41,120-00:11:46,960` It's just so much wilder and richer than we ever gave it credit for. A galaxy and a grain of sand.
+- `00:11:46,960-00:11:51,520` Exactly. I think that is the perfect place to leave it. We will, of course, put a link to the
+- `00:11:51,520-00:11:56,320` neuroglancer viewer in the show notes. You can actually fly through this dataset yourself online.
+- `00:11:56,320-00:12:00,640` Oh, you have to. It's a real trip. Thanks for joining us for this deep dive.
+- `00:12:00,640-00:12:05,440` And next time you have a thought, just try to imagine the millions of gigabytes of machinery
+- `00:12:05,440-00:12:09,360` that just spun up to make it happen. We'll see you next time. Take care, everyone.
