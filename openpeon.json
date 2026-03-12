@@ -13,14 +13,34 @@
     "session.start": {
       "sounds": [
         {
-          "file": "sounds/session-start-distinct.mp3",
-          "label": "Distinct session",
-          "sha256": "2b066c1b127e25359427705e5f20da72c50076cff6b4e870b7ebb945afe37a3d"
-        },
-        {
           "file": "sounds/session-start-welcome-to-the-deep-dive.mp3",
           "label": "Welcome to the deep dive",
           "sha256": "d9a7cd05badd6d938d5bb7d1b2359f6ba96ec4e4a83b58e412e0b835e78575ee"
+        },
+        {
+          "file": "sounds/session-start-welcome-to-the-deep-dive-short.mp3",
+          "label": "Welcome to the deep dive.",
+          "sha256": "298bcf96d4374c32c6ae52de78166b2958c2148be0b76d4c8d91c9a5763db4b6"
+        },
+        {
+          "file": "sounds/session-start-welcome-back-to-the-deep-dive.mp3",
+          "label": "Welcome back to The Deep Dive.",
+          "sha256": "aca99d363faf4b52805a284431e1f09f71b2c8478337be2c264c520dc53210ae"
+        },
+        {
+          "file": "sounds/session-start-deep-dive-is-so-much-fun.mp3",
+          "label": "And that's exactly why this deep dive is so much fun.",
+          "sha256": "f2b2030fca70b8c54c8b06c48f9b13a2a4737c80fcfab130532ad146bf424d30"
+        },
+        {
+          "file": "sounds/session-start-welcome-to-this-deep-dive.mp3",
+          "label": "Welcome to this deep dive.",
+          "sha256": "35c51945bb72bec11b5a5e31f5f241607172ee0425ce52dec4961ff196463300"
+        },
+        {
+          "file": "sounds/session-start-well-welcome-to-the-deep-dive.mp3",
+          "label": "Well, welcome to the deep dive.",
+          "sha256": "6890431374eb395e9f3523cff945090751ac3df351337983a1da7d4c1935dd0c"
         }
       ]
     },
@@ -40,6 +60,21 @@
           "file": "sounds/task-ack-in-a-nutshell-structure.mp3",
           "label": "In a nutshell",
           "sha256": "44da2917ba036778064ff09b8e76454d65747d400c7b65bb7d745b21277e2c65"
+        },
+        {
+          "file": "sounds/task-ack-a-great-question.mp3",
+          "label": "A great question.",
+          "sha256": "e99c88d01cbd2f1ec46ba9c99eff9896c0d9c44d572272ef70b3d00c267b59f5"
+        },
+        {
+          "file": "sounds/task-ack-a-fascinating-brief.mp3",
+          "label": "A fascinating brief.",
+          "sha256": "948ee3078948db027d6a6fb82f38078925617d1b32b7fcfacedb73e3621db2e9"
+        },
+        {
+          "file": "sounds/task-ack-perfect-analogy-for-this.mp3",
+          "label": "That really is the perfect analogy for this.",
+          "sha256": "3bfebfff03d64b069602cba48aa3e528ee13e846f80bba53da2e66a7610fcc23"
         }
       ]
     },
@@ -59,6 +94,21 @@
           "file": "sounds/task-progress-zoom-out-for-a-second.mp3",
           "label": "Zoom out",
           "sha256": "10cb693456d6dce871410eec4b5ddce6a9b234e7f1945b65eca40aea893481f2"
+        },
+        {
+          "file": "sounds/task-progress-this-is-already-getting-interesting.mp3",
+          "label": "Like this is already getting interesting.",
+          "sha256": "339631e9e85c26918ea9802ab357835cbe952872e0d4b936b48adb5766bf189a"
+        },
+        {
+          "file": "sounds/task-progress-heres-where-it-gets-really-interesting.mp3",
+          "label": "Ah, yes. Here's where it gets really interesting.",
+          "sha256": "a882e8304c994025ec5d62f429f8b3a452130d2a444545fd489ba846b9ef80b8"
+        },
+        {
+          "file": "sounds/task-progress-the-dynamic-is-everything.mp3",
+          "label": "The dynamic is everything.",
+          "sha256": "c260a5befbf6ffaf0cff458ecfc0a27f8c3a07025a71cb482502261f9109797d"
         }
       ]
     },
@@ -78,6 +128,21 @@
           "file": "sounds/task-complete-full-circle.mp3",
           "label": "Full circle",
           "sha256": "d605faab2fef75702a72e8559303c542c52737b76e81c490db27d7bf4bb805f2"
+        },
+        {
+          "file": "sounds/task-complete-its-an-incredible-thought.mp3",
+          "label": "It's an incredible thought.",
+          "sha256": "b248c771e42e08474409ead3e80a5e4dbc6cfe7fb4d9bab323af79660e4d3800"
+        },
+        {
+          "file": "sounds/task-complete-that-is-amazing.mp3",
+          "label": "That is amazing.",
+          "sha256": "a97919d45eb644c45c6c9955420ec885996fd5239bcbb2be50437119089f870d"
+        },
+        {
+          "file": "sounds/task-complete-exactly-the-vibe.mp3",
+          "label": "That is exactly the vibe they are going for.",
+          "sha256": "f08b972e73a6461e628b70752af711efaef3a7d33d4b9cbcb6f78fb9fb1128c0"
         }
       ]
     },
@@ -92,6 +157,16 @@
           "file": "sounds/task-error-failure-is-informative.mp3",
           "label": "Failure is informative",
           "sha256": "f6210193e429fab4df8a04d0bc2ba6daf485fe72e66bb699c19bb80c5643305f"
+        },
+        {
+          "file": "sounds/task-error-more-complicated.mp3",
+          "label": "This is where it gets more complicated.",
+          "sha256": "bea768334c365e80c02660ea015c3c5fdc517a18e78d24141d25146306bf94a5"
+        },
+        {
+          "file": "sounds/task-error-unexpectedly-revealing-setback.mp3",
+          "label": "An unexpectedly revealing setback.",
+          "sha256": "7df52c4d120fe143dd31539f87b0420a79ecda886c17a80a66aa13cec4d75083"
         }
       ]
     },
@@ -111,6 +186,16 @@
           "file": "sounds/input-required-depends-on-you.mp3",
           "label": "Depends on you",
           "sha256": "f5b19de2cff887918f93954e1d26f6e30d4c53510a86796926d071e670583cf5"
+        },
+        {
+          "file": "sounds/input-required-we-actually-need-your-input-here.mp3",
+          "label": "We actually need your input here.",
+          "sha256": "9d58311be6815a380059fcff351c86e2e784f8da150109dbeb210d3a101164d2"
+        },
+        {
+          "file": "sounds/input-required-before-we-go-further-alt.mp3",
+          "label": "Before we go further, we need one key detail.",
+          "sha256": "bb6fcf83d77c00fc2ff8d69353427805b452c7bea596e76aad9ea099ac2ee6fb"
         }
       ]
     },
@@ -120,6 +205,16 @@
           "file": "sounds/resource-limit-system-is-telling-us-something.mp3",
           "label": "System is telling us something",
           "sha256": "7aa244d10a4c4f8885a539636a6e2b1fe6184a1251c12cd53732431ca6a6df04"
+        },
+        {
+          "file": "sounds/resource-limit-youre-completely-rewiring-it.mp3",
+          "label": "You're completely rewiring it.",
+          "sha256": "c900875bdde5216bca1cba8baa9205bdb3cc9a9113481ec52e868440894c65cd"
+        },
+        {
+          "file": "sounds/resource-limit-systems-level-turning-point.mp3",
+          "label": "We've hit a systems level turning point.",
+          "sha256": "cd130048388ce136e4f648ed8bbdf6cc614b7709dd65e3238f12d9763311935d"
         }
       ]
     },
@@ -129,6 +224,36 @@
           "file": "sounds/session-end-right-place-to-leave-it.mp3",
           "label": "Right place to leave it",
           "sha256": "d45131ecd7f8afba2feb591844b13f1f59e1b98c6dfbad3c15cbb1468492dcce"
+        },
+        {
+          "file": "sounds/session-end-youve-been-listening.mp3",
+          "label": "You've been listening to The Deep Dive.",
+          "sha256": "b4321312fa53398e6e89c08de7c16b89d3dc7e7fa7feb84b16de49472cdb12b3"
+        },
+        {
+          "file": "sounds/session-end-fascinating-deep-dive.mp3",
+          "label": "This has been a fascinating deep dive.",
+          "sha256": "ce17720f393a38571e9957ddf0bd3c4fc85a5e5e4bb4fd24b1c70597d37af88c"
+        },
+        {
+          "file": "sounds/session-end-a-profound-thought.mp3",
+          "label": "A profound thought.",
+          "sha256": "bdb88ee714037d8cd85681f41190ce4116bad782f484b8f363b00a3964034225"
+        },
+        {
+          "file": "sounds/session-end-well-see-you-next-time.mp3",
+          "label": "We'll see you next time. Take care, everyone.",
+          "sha256": "3473942c285116abf02e2bf85708524669cc6640370368e08d8d13494031a09e"
+        },
+        {
+          "file": "sounds/session-end-keep-listening-closely.mp3",
+          "label": "Keep listening closely.",
+          "sha256": "e976d70b606f482c21ca16e0466ed37811a6949a519dc2d88d48457428c40220"
+        },
+        {
+          "file": "sounds/session-end-completely-honest-with-you.mp3",
+          "label": "At least the machine is being completely honest with you.",
+          "sha256": "0f9128b6877ec379c0577524044d1298be3db50083cf1386ac9d7988c9f528da"
         }
       ]
     }
