@@ -4,6 +4,8 @@
 
 The point of the pack is the AI hosts' exaggerated podcast mannerisms: over-serious framing, constant transitions, dramatic recaps, and polished banter applied to tiny software events.
 
+In more honest terms: this repo is a careful curation pipeline for a very specific and unusually reusable kind of AI slop.
+
 The repo serves two purposes:
 
 1. it contains the packaged OpenPeon sound pack in a clean, shippable format
