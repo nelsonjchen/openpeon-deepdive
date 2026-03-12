@@ -1,7 +1,7 @@
 {
   "cesp_version": "1.0",
   "name": "deep-dive-banter",
-  "display_name": "Deep Dive Banter",
+  "display_name": "Google Audio Overview Deep Dive",
   "version": "0.1.0",
   "description": "Unofficial AI host parody clips for OpenPeon, mined and tightened from Google's Audio Overviews, mostly from NotebookLM.",
   "author": {
